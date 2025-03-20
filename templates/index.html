@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnaissance de Panneaux</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        img { max-width: 300px; margin-top: 20px; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1> Reconnaissance de Panneaux 🚦</h1>
+    
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if img_path %}
+        <h2>Résultat :</h2>
+        <img src="{{ img_path }}" alt="Image test">
+        <p><strong>Classe prédite :</strong> {{ predicted_class }}</p>
+        <p><strong>Confiance :</strong> {{ confidence|round(3) }}</p>
+    {% endif %}
+</body>
+</html>

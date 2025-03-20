@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/DU%20SORBONNE/MlOps/MLOps_Project/mlruns/726333211427032777/ec497b2b88cd4be9a84e36410b74a28f/artifacts
+end_time: 1742476367273
+entry_point_name: ''
+experiment_id: '726333211427032777'
+lifecycle_stage: active
+run_id: ec497b2b88cd4be9a84e36410b74a28f
+run_name: aged-zebra-577
+run_uuid: ec497b2b88cd4be9a84e36410b74a28f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742476052789
+status: 3
+tags: []
+user_id: valen
