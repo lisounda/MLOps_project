@@ -1,0 +1,21 @@
+artifact_path: traffic_sign_model
+flavors:
+  python_function:
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.tensorflow
+    python_version: 3.12.3
+  tensorflow:
+    code: null
+    data: data
+    keras_version: 2.19.0
+    model_type: keras
+    save_format: tf
+mlflow_version: 2.21.0
+model_size_bytes: 6687949
+model_uuid: aae974273370443eaed04016059070e6
+prompts: null
+run_id: 80524d4e605b4346b6b520f70eaab53d
+utc_time_created: '2025-03-20 02:25:26.068593'

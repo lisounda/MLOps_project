@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/DU%20SORBONNE/MlOps/MLOps_Project/mlruns/726333211427032777/80524d4e605b4346b6b520f70eaab53d/artifacts
+end_time: 1742437531971
+entry_point_name: ''
+experiment_id: '726333211427032777'
+lifecycle_stage: active
+run_id: 80524d4e605b4346b6b520f70eaab53d
+run_name: sassy-auk-722
+run_uuid: 80524d4e605b4346b6b520f70eaab53d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742437190904
+status: 3
+tags: []
+user_id: valen

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/DU%20SORBONNE/MlOps/MLOps_Project/mlruns/726333211427032777/10f0ccaeea2b444f858be41bd76d417d/artifacts
+end_time: 1742436851158
+entry_point_name: ''
+experiment_id: '726333211427032777'
+lifecycle_stage: active
+run_id: 10f0ccaeea2b444f858be41bd76d417d
+run_name: silent-bee-678
+run_uuid: 10f0ccaeea2b444f858be41bd76d417d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1742436353754
+status: 3
+tags: []
+user_id: valen
