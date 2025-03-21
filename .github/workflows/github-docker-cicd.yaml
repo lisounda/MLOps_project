@@ -45,13 +45,13 @@ jobs:
 
       - name: Obtenir la date actuelle
         id: date
-        run: echo "DATE=$(date +'%Y-%m-%d--%H-%M-%S')" >> $GITHUB_ENV
+        run: echo "DATE=$(date +'%Y-%m-%d--%H-%M-%S' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
       - name: Construire l'image Docker
-        run: docker build . --file Dockerfile --tag $DOCKER_USER/$REPO_NAME:${{ env.DATE }}
+        run: docker build . --file Dockerfile --tag $(echo "$DOCKER_USER/$REPO_NAME:${{ env.DATE }}" | tr '[:upper:]' '[:lower:]')
 
       - name: Connexion à Docker Hub
         run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
 
       - name: Push de l'image sur Docker Hub
-        run: docker push $DOCKER_USER/$REPO_NAME:${{ env.DATE }}
+        run: docker push $(echo "$DOCKER_USER/$REPO_NAME:${{ env.DATE }}" | tr '[:upper:]' '[:lower:]')
