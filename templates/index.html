@@ -23,16 +23,20 @@
     {% endif %}
 
     {% if img_path %}
+
         <h2>Résultat :</h2>
         <img src="{{ url_for('static', filename=img_path) }}" alt="Image test">
 
         <p><strong>Classe prédite :</strong> {{ predicted_class }}</p>
+
         <p><strong>Confiance :</strong> {{ confidence|round(3) }}</p>
     {% endif %}
 
 
     {% if panneau_img_path %}
+
   <h3>Panneau correspondant trouvé dans le dataset :</h3>
+
   <img src="{{ url_for('static', filename=panneau_img_path) }}" width="100">
     {% endif %}
 

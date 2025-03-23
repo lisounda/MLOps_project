@@ -81,7 +81,6 @@ def index():
             if class_images:
                 random_image = random.choice(class_images)
                 panneau_img_src = os.path.join(train_class_dir, random_image)
-                # Copie vers static/temp
                 temp_display_path = os.path.join(TEMP_FOLDER, f"class_{predicted_class}.png")
                 cv2.imwrite(temp_display_path, cv2.imread(panneau_img_src))
                 panneau_img_web = f"temp/class_{predicted_class}.png"
@@ -95,7 +94,6 @@ def index():
 
     return render_template("index.html")
 
-# API REST
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
@@ -113,7 +111,6 @@ def predict():
         predictions = model.predict(image)
         predicted_class = np.argmax(predictions, axis=1)[0]
         confidence = float(np.max(predictions))
-
         description = panneaux_signification.get(str(predicted_class), "Panneau inconnu")
 
         return jsonify({
@@ -125,6 +122,6 @@ def predict():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# Lancer
+# Lancer l'app
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
